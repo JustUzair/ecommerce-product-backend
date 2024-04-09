@@ -1,0 +1,96 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap', rel='stylesheet')
+    title Product Catalog
+    style.
+      *{
+          margin:0;
+          padding:0;
+          box-sizing: border-box;
+      }
+      body{
+          font-family: 'Poppins', consolas, sans-serif;
+          background-color: #f9f9f9;
+          color: #333;
+          display: flex;
+          flex-direction:column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          margin: 0;
+      }
+      .header {
+          text-transform: capitalize;
+          font-size: 32px;
+          font-weight: bold;
+          margin-bottom: 20px;
+      }
+      .page-wrapper{
+          width: 100%;
+          max-width: 800px;
+          background-color: #fff;
+          font-size: 14px;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .product-card--container{
+          margin-top: 20px;
+      }
+      .product-card{
+          padding: 40px 20px;
+          border-radius: 10px;
+          background-color: #f7f7f7;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+      }
+      .photo-wrapper{
+          display: flex;
+          margin-top: 20px;
+          justify-content: center;
+      }
+      .photo-wrapper img{
+          margin: 0 10px;
+          border-radius: 5px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      hr{
+          border: 0.7px solid #ccc;
+          margin-top: 20px;
+      }
+
+body 
+    .header Your Products
+    if products.length > 0
+        .page-wrapper
+            .product-card--container
+                each product,i in products
+                    .product-card
+                        span(style='text-transform:capitalize; font-size: 16px; font-weight: semibold;') Product ID/SKU #{product._id} 
+                        br
+                        span(style='text-transform:capitalize; font-size: 20px; font-weight: bold;') #{product.name} 
+                        br
+                        span(style='text-transform:capitalize; color: #555;') Description: #{product.description}
+                        br
+                        span(style='text-transform:capitalize; color: #555;') Stock  : #{product.stockQuantity}
+                        br
+                        span(style='text-transform:capitalize; color: #555;') Price : #{product.price}
+                        br
+                        span(style='text-transform:capitalize; color: #555;') Cost to Seller  : #{product.costPrice}
+                        br
+                        span(style='text-align: center; font-weight:600; font-size: 16px; margin-top: 10px;') Photos of 
+                            span(style='text-decoration:underline;') #{product.name}
+                        .photo-wrapper
+                            each photo in product.photos
+                                img(width='150' height='150' src=`/img/${photo}` alt='')
+                        if i < products.length - 1 
+                            hr
+    else
+        .page-wrapper
+            .product-card
+                h1(style="text-align:center; font-size:24px; color: #555;") No Products Found !!

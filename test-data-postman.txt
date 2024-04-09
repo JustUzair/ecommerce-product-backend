@@ -1,0 +1,28 @@
+========================== Products
+{
+"name":"Titan Watch",
+"description":"Titan Black and Gold Black Dial Multifunction Stainless Steel Strap watch for Men",
+"price":8045,
+"stockQuantity":100,
+"costPrice":6000,
+"photos":["watch1_1.jpg","watch1_2.jpg"]
+
+}
+{
+"name":"Titan Karishma Watch",
+"description":"Titan Men's Multifunction Karishma: Two-Tone Steel Elegance Watch",
+"price":5000,
+"stockQuantity":100,
+"costPrice":3500,
+"photos":["watch2_1.jpg","watch2_2.jpg"]
+
+}
+========================== User
+{
+    "email":"user@gmail.com",
+    "password":"Test@12345"
+}
+{
+    "email":"admin@app.com",
+    "password":"Test@12345"
+}

@@ -1,0 +1,3 @@
+﻿ProductID,Name,Description,Price,CostPrice,StockQuantity,Images
+65f174e975c62c95eeb0b3f0,Titan Watch,Titan Black and Gold Black Dial Multifunction Stainless Steel Strap watch for Men,8045,6000,100,http://localhost:3000/img/watch1_1.jpg ; http://localhost:3000/img/watch1_2.jpg
+65f17709125de29ce1f66db5,Titan Men Karishma Watch,Titan Men's Multifunction Karishma: Two-Tone Steel Elegance Watch,5000,3500,100,http://localhost:3000/img/watch2_1.jpg ; http://localhost:3000/img/watch2_2.jpg
